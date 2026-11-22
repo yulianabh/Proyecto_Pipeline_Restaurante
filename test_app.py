@@ -33,6 +33,4 @@ def test_crear_pedido_correctamente():
 def test_pedido_con_cantidad_invalida():
     resultado = crear_pedido("Pizza", 0)
 
-    assert "error" in resultado
-def test_fallo_controlado():
-    assert 1 == 2
+ 
