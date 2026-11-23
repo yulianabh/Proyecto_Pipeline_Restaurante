@@ -12,13 +12,11 @@ def test_crear_reserva_correctamente():
 
 def test_reserva_sin_cliente():
     resultado = crear_reserva("", 4)
-
     assert "error" in resultado
 
 
 def test_reserva_con_personas_invalidas():
     resultado = crear_reserva("Carlos", 0)
-
     assert "error" in resultado
 
 
@@ -32,5 +30,24 @@ def test_crear_pedido_correctamente():
 
 def test_pedido_con_cantidad_invalida():
     resultado = crear_pedido("Pizza", 0)
+    assert "error" in resultado
 
- 
+
+def test_reserva_con_cliente_solo_espacios():
+    resultado = crear_reserva("   ", 2)
+    assert "error" in resultado
+
+
+def test_reserva_con_personas_texto():
+    resultado = crear_reserva("Ana", "dos")
+    assert "error" in resultado
+
+
+def test_pedido_con_producto_solo_espacios():
+    resultado = crear_pedido("   ", 1)
+    assert "error" in resultado
+
+
+def test_pedido_con_cantidad_texto():
+    resultado = crear_pedido("Pizza", "dos")
+    assert "error" in resultado
