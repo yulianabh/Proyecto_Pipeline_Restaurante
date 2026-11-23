@@ -28,3 +28,6 @@ jobs:
 
       - name: Auditoria de seguridad
         run: python -m pip_audit
+      
+      - name: Prueba de rendimiento
+        run: python rendimiento.py
