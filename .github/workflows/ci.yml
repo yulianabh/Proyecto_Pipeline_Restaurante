@@ -25,3 +25,6 @@ jobs:
 
       - name: Ejecutar pruebas
         run: python -m pytest -v
+
+      - name: Auditoria de seguridad
+        run: python -m pip_audit
